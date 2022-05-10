@@ -1,0 +1,46 @@
+How to enable xml messages with Postman:
+1. In "Headers" add the key "Content-Type" with the value "text/xml"
+2. In "Body" add the XML message to send
+-------------------------------------------
+xml messages
+-------------------------------------------
+-- Get method without parameters
+<?xml version="1.0"?>
+<methodCall>
+    <methodName>full_chain</methodName>
+</methodCall>
+
+-- Get method with parameters
+<?xml version="1.0"?>
+<methodCall>
+    <methodName>search_amount_user</methodName>
+    <params>
+    	<param>
+    		<value>
+    			<string>raton</string>    		
+    		</value>
+    	</param>
+    </params>
+</methodCall>
+
+<?xml version="1.0"?>
+<methodCall>
+    <methodName>register_transaction</methodName>
+    <params>
+    	<param>
+    		<value>
+    			<string>adan</string>    		
+    		</value>
+    	</param>
+        <param>
+    		<value>
+    			<string>eva</string>    		
+    		</value>
+    	</param>
+        <param>
+    		<value>
+    			<string>1</string>    		
+    		</value>
+    	</param>
+    </params>
+</methodCall>
